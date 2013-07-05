@@ -3100,6 +3100,126 @@ Out[43]:</div>
 </div>
 </div>
 </div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Traversing a tree is laugably easy. It is not, for anyone that has written.</li>
+<li>Helps you wrap your head around complex recurssion</li>
+<li>Similarly with spreadsheets: no need to 2 loops - breaking is complex.</li>
+</ul>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Reading a large csv file</h3>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">csv</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#People over 6&#39; living in DC that have facebook accounts</span>
+<span class="k">def</span> <span class="nf">filter_data_for_nsa</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;2013.csv&#39;</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+        <span class="n">nsa_file</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s">&#39;|&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">nsa_file</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s">&#39;country&#39;</span><span class="p">]</span><span class="o">!=</span><span class="s">&#39;usa&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">row</span><span class="p">:</span>
+                <span class="k">continue</span>
+        <span class="c"># do_something now!</span>
+            
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">six_foot_dc_politicians</span><span class="p">():</span>
+    <span class="n">nsa_file</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s">&#39;|&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">nsa_file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s">&#39;country&#39;</span><span class="p">]</span><span class="o">!=</span><span class="s">&#39;usa&#39;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">row</span><span class="p">:</span>
+            <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">city</span><span class="o">==</span><span class="s">&#39;DC&#39;</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">row</span>
+        
+<span class="k">def</span> <span class="nf">do_something_to_folks</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">six_foot_dc_politicians</span><span class="p">:</span>
+        <span class="k">pass</span>
+        <span class="c">#do_something</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Renders unit testable</li>
+<li>testing using strings - Polymorphic duck typing</li>
+<li>Abstraction of interesting lines rather than all lines</li>
+</ul>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Code Jam problems:</h3>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">get_my_data</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;input_small.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">test_cases</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">each_case</span> <span class="ow">in</span> <span class="n">text_cases</span><span class="p">:</span>
+            <span class="n">golf_balls</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">base_balls</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">golf_balls</span><span class="p">,</span> <span class="n">base_balls</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">where_i_manipulate_data</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">golf_balls</span><span class="p">,</span> <span class="n">base_balls</span> <span class="ow">in</span> <span class="n">get_my_data</span><span class="p">():</span>
+        <span class="k">pass</span>
+        <span class="c">#do_something</span>
+</pre></div>
+
+</div>
+</div>
+</div>
     </div></section>
     </section><section>
     <section>
@@ -3277,6 +3397,17 @@ Out[60]:</div>
 </div>
 </div>
     </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>Summary:</h2>
+<ul>
+<li>Iterators (and Generators) are powerful abstractions</li>
+<li>You <em>always</em> do iterations. Do it <em>better</em></li>
+<li>Itertools module has a lot of powerful functions to deal with iterators</li>
+<li>Iterators, like all good abstractions, make programs better, most of all, happy</li>
+</ul>
+</div></section>
     </section>
 
 </div></div>
