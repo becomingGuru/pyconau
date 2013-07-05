@@ -1720,25 +1720,26 @@ text-align: inherit;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2>Pythonic Iterators and Generators</h2>
 <p>Lakshman Prasad</p>
+<p><a href="http://twitter.com/becomingGuru">@becomingGuru</a></p>
 <p>Pycon AU 2013, Hobart</p>
 </div><aside class="notes">
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Work for Mc, Mc does MC. I work for a fairly newly created division which provides technology solutions to them.</p>
 <p>My primary expertise has been in Python eco system and it's set of tools. Although I have had to work significantly on JS recently.</p>
-<p>I have never done an intro level talk. But when I write such answers on So, they Filling in after the great session by Peter is hard. But I'll see what I can do. This talk starts from an intro level and then gets into fairly advanced levels. So if you are an advanced user, stay back and we will hopefully have something for discussion.</p>
-<p>I had a great time at the conference BTW. Such a nice city, so well organised, nice lunch. Since you just had lunch - Lets go through some qs. Dont worry if you are not able to answer it, by the end of the session, hopefully, you'll be in a position to.</p>
+<p>I have never done an intro level talk. But when I write such answers on SO, they get popular. Filling in after the great session by Peter is hard. But I'll see what I can do. This talk starts from an intro level and then gets into fairly advanced levels. So if you are an advanced user, stay back and we will hopefully have something for discussion.</p>
+<p>I had a great time at the conference BTW. Such a nice city, so well organised, nice lunch. Since you just had lunch - Lets go through some qs. Dont worry if you are not able to answer the questions in the warmup exercise, by the end of the session, hopefully, you'll be in a position to.</p>
 </div>
     </aside></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Dictionary of states mapped to capitals</p>
+<h3>Dictionary of states mapped to capitals</h3>
 </div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">states</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;NSW&#39;</span><span class="p">,</span> <span class="s">&#39;NT&#39;</span><span class="p">,</span> <span class="s">&#39;QLD&#39;</span><span class="p">,</span> <span class="s">&#39;SA&#39;</span><span class="p">,</span> <span class="s">&#39;TAS&#39;</span><span class="p">,</span> <span class="s">&#39;VIC&#39;</span><span class="p">,</span> <span class="s">&#39;WA&#39;</span><span class="p">]</span>
 </pre></div>
@@ -1750,7 +1751,7 @@ text-align: inherit;
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">states</span>
 </pre></div>
@@ -1776,7 +1777,7 @@ text-align: inherit;
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">capitals</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Sydney&#39;</span><span class="p">,</span> <span class="s">&#39;Darwin&#39;</span><span class="p">,</span> <span class="s">&#39;Brisbane&#39;</span><span class="p">,</span> <span class="s">&#39;Adelaide&#39;</span><span class="p">,</span> <span class="s">&#39;Hobart&#39;</span><span class="p">,</span> <span class="s">&#39;Melbourne&#39;</span><span class="p">,</span> <span class="s">&#39;Perth&#39;</span><span class="p">]</span>
 </pre></div>
@@ -1788,7 +1789,7 @@ text-align: inherit;
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">capitals</span>
 </pre></div>
@@ -1814,7 +1815,40 @@ text-align: inherit;
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">zip</span><span class="p">(</span><span class="n">states</span><span class="p">,</span><span class="n">capitals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[44]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>[(&apos;NSW&apos;, &apos;Sydney&apos;),
+ (&apos;NT&apos;, &apos;Darwin&apos;),
+ (&apos;QLD&apos;, &apos;Brisbane&apos;),
+ (&apos;SA&apos;, &apos;Adelaide&apos;),
+ (&apos;TAS&apos;, &apos;Hobart&apos;),
+ (&apos;VIC&apos;, &apos;Melbourne&apos;),
+ (&apos;WA&apos;, &apos;Perth&apos;)]</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">states</span><span class="p">,</span><span class="n">capitals</span><span class="p">))</span>
 </pre></div>
@@ -1827,7 +1861,41 @@ text-align: inherit;
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[5]:</div>
+Out[58]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>{&apos;NSW&apos;: &apos;Sydney&apos;,
+ &apos;NT&apos;: &apos;Darwin&apos;,
+ &apos;QLD&apos;: &apos;Brisbane&apos;,
+ &apos;SA&apos;: &apos;Adelaide&apos;,
+ &apos;TAS&apos;: &apos;Hobart&apos;,
+ &apos;VIC&apos;: &apos;Melbourne&apos;,
+ &apos;WA&apos;: &apos;Perth&apos;}</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">state_capitals</span> <span class="o">=</span> <span class="n">_</span>
+<span class="n">state_capitals</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[59]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <pre>{&apos;NSW&apos;: &apos;Sydney&apos;,
@@ -1847,12 +1915,12 @@ Out[5]:</div>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Flatten lists</p>
+<h3>Flatten lists</h3>
 </div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">itertools</span><span class="o">,</span> <span class="nn">operator</span>
 <span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[[</span><span class="s">&#39;A&#39;</span><span class="p">,</span><span class="s">&#39;B&#39;</span><span class="p">,</span><span class="s">&#39;C&#39;</span><span class="p">],[</span><span class="s">&#39;D&#39;</span><span class="p">,</span><span class="s">&#39;E&#39;</span><span class="p">],[</span><span class="s">&#39;F&#39;</span><span class="p">],[</span><span class="s">&#39;G&#39;</span><span class="p">,</span><span class="s">&#39;H&#39;</span><span class="p">]]</span>
@@ -1865,7 +1933,7 @@ Out[5]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="n">list_of_lists</span>
 </pre></div>
@@ -1891,7 +1959,7 @@ Out[5]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">sum</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">,[])</span>
 </pre></div>
@@ -1904,7 +1972,7 @@ Out[5]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[8]:</div>
+Out[28]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <pre>[&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;]</pre>
@@ -1918,7 +1986,7 @@ Out[8]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">list_of_lists</span><span class="p">))</span>
 </pre></div>
@@ -1931,7 +1999,7 @@ Out[8]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[16]:</div>
+Out[29]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <pre>[&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;]</pre>
@@ -1945,7 +2013,7 @@ Out[16]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="n">list_of_lists</span><span class="p">))</span>
 </pre></div>
@@ -1958,7 +2026,7 @@ Out[16]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[17]:</div>
+Out[30]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <pre>[&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;]</pre>
@@ -1972,7 +2040,7 @@ Out[17]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">))</span>
 </pre></div>
@@ -1985,10 +2053,10 @@ Out[17]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[11]:</div>
+Out[31]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
-<pre>[&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;]</pre>
+<pre>[&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;]</pre>
 </div>
 </div>
 
@@ -1999,7 +2067,7 @@ Out[11]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">each_list</span> <span class="ow">in</span> <span class="n">list_of_lists</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">each_list</span><span class="p">]</span>
 </pre></div>
@@ -2012,28 +2080,56 @@ Out[11]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[13]:</div>
+Out[32]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
-<pre>[&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;]</pre>
+<pre>[&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;, &apos;H&apos;]</pre>
 </div>
 </div>
 
 </div>
 </div>
 </div>
-    </div><div class="fragment">
-    
+    </div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Product of a,b,c and 1,2</p>
+<h3>Product of collections</h3>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;] [1, 2]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
 </div>
     </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">([</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]))</span>
+<div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -2044,7 +2140,7 @@ Out[13]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[18]:</div>
+Out[81]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <pre>[(&apos;a&apos;, 1), (&apos;a&apos;, 2), (&apos;b&apos;, 1), (&apos;b&apos;, 2), (&apos;c&apos;, 1), (&apos;c&apos;, 2)]</pre>
@@ -2058,12 +2154,12 @@ Out[18]:</div>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Powerset of a range of values</p>
+<h3>Powerset of a range of values</h3>
 </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">elements</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
@@ -2077,7 +2173,7 @@ Out[18]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[19]:</div>
+Out[34]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <pre>[(0, 1), (0, 2), (1, 2)]</pre>
@@ -2091,7 +2187,7 @@ Out[19]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
@@ -2104,7 +2200,7 @@ Out[19]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[20]:</div>
+Out[35]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <pre>[(), (0,), (1,), (2,), (0, 1), (0, 2), (1, 2), (0, 1, 2)]</pre>
@@ -2118,14 +2214,14 @@ Out[20]:</div>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Iterables</p>
-</div><div class="fragment">
+<h3>Standard for loop</h3>
+</div><div style=display:none>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="k">print</span> <span class="p">[</span><span class="n">el</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<div class="highlight"><pre><span class="n">alist</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2135,29 +2231,173 @@ Out[20]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">alist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">)):</span>
+    <span class="k">print</span> <span class="n">alist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">alist</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">element</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Standard for loop. Everyone learns first. Works on all languages</li>
+<li>Python programmers know that, there is no need to explicitly increment.</li>
+<li>The best is what it truly can be. Developer Happiness. This is what we need. This is what we have</li>
+</ul>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Iterables</h3>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">el</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">print</span> <span class="p">[</span><span class="n">el</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="s">&#39;PYCON AU&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
 </div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>[&apos;P&apos;, &apos;Y&apos;, &apos;C&apos;, &apos;O&apos;, &apos;N&apos;, &apos; &apos;, &apos;A&apos;, &apos;U&apos;]
+</pre>
 </div>
-    </div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
-<span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s">&#39;~/gh/&#39;</span><span class="p">))</span>
-</pre></div>
+</div>
 
 </div>
 </div>
 </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="k">class</span> <span class="nc">Fib</span><span class="p">:</span>
     <span class="sd">&#39;&#39;&#39;iterator that yields numbers in the Fibonacci sequence&#39;&#39;&#39;</span>
@@ -2181,6 +2421,392 @@ Out[20]:</div>
 </div>
 </div>
 </div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>When you loop over a string</li>
+<li>for loop in python is a basic construct for looping over the collections</li>
+<li>iterable is something than you can loop on. - It has exactly 2 requirements.</li>
+<li>To make something iterable you dont have to ask before, nth, next 2 or anything.</li>
+<li>That is what makes it flexible and use it in all of the places - files, characters of string, lists.</li>
+</ul>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Stdlib provides many iterators</h3>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">state_capitals</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">element</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>VIC
+WA
+TAS
+QLD
+NT
+SA
+NSW
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="n">state_capitals</span><span class="o">.</span><span class="n">itervalues</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[63]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>[&apos;Melbourne&apos;, &apos;Perth&apos;, &apos;Hobart&apos;, &apos;Brisbane&apos;, &apos;Darwin&apos;, &apos;Adelaide&apos;, &apos;Sydney&apos;]</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">state_capitals</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[64]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>&lt;dictionary-itemiterator at 0x10f9fff70&gt;</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="n">state_capitals</span><span class="o">.</span><span class="n">iteritems</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[65]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>[(&apos;VIC&apos;, &apos;Melbourne&apos;),
+ (&apos;WA&apos;, &apos;Perth&apos;),
+ (&apos;TAS&apos;, &apos;Hobart&apos;),
+ (&apos;QLD&apos;, &apos;Brisbane&apos;),
+ (&apos;NT&apos;, &apos;Darwin&apos;),
+ (&apos;SA&apos;, &apos;Adelaide&apos;),
+ (&apos;NSW&apos;, &apos;Sydney&apos;)]</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dicts dont have any predetermined order</li>
+<li>One of the reasons I am casting to list is because of the printability</li>
+</ul>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>More Iterators in the stdlib</h3>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">glob</span>
+<span class="n">wares</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">/tmp/*&#39;</span><span class="o">%</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">wares</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>[&apos;//tmp/launch-4tjRHK&apos;, &apos;//tmp/launch-ImFEtV&apos;, &apos;//tmp/launch-IT4WB7&apos;, &apos;//tmp/launchd-117.Krg0qM&apos;, &apos;//tmp/launchd-154.htCYYc&apos;, &apos;//tmp/launchd-260.0VlmMk&apos;, &apos;//tmp/launchd-472.1U5KpU&apos;, &apos;//tmp/manifest&apos;, &apos;//tmp/manifest.tar.gz&apos;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">(</span><span class="s">&#39;/Users/lpd/gh/aut/dickens.txt&#39;</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">line</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>It was the best of the times
+
+It was the worst of the times
+
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>File system is a 2d data structure</li>
+<li>A file can be seen as a collection of lines.</li>
+<li>Brings back to the interesting note that was discussed earlier - you cannot get to the 10th line directly before reading the one. </li>
+</ul>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Stdlib consumes iterators in interesting ways</h3>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>list</li>
+<li>max</li>
+<li>min</li>
+<li>sort</li>
+</ul>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Custom Iterators</h3>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">Card</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">suit</span><span class="p">):</span>
+        <span class="n">FACE_CARD</span> <span class="o">=</span> <span class="p">{</span><span class="mi">11</span><span class="p">:</span> <span class="s">&#39;J&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="s">&#39;Q&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">:</span> <span class="s">&#39;K&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suit</span> <span class="o">=</span> <span class="n">suit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rank</span> <span class="o">=</span> <span class="n">rank</span> <span class="k">if</span> <span class="n">rank</span> <span class="o">&lt;=</span><span class="mi">10</span> <span class="k">else</span> <span class="n">FACE_CARD</span><span class="p">[</span><span class="n">rank</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__unicode__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&quot;</span><span class="si">%s%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">suit</span><span class="p">)</span>
+    
+<span class="k">class</span> <span class="nc">Deck</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cards</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;S&#39;</span><span class="p">,</span> <span class="s">&#39;D&#39;</span><span class="p">,</span> <span class="s">&#39;C&#39;</span><span class="p">,</span> <span class="s">&#39;H&#39;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">cards</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Card</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cards</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">a_deck</span> <span class="o">=</span> <span class="n">Deck</span><span class="p">()</span>
+<span class="nb">list</span><span class="p">([</span><span class="n">card</span><span class="o">.</span><span class="n">__unicode__</span><span class="p">()</span> <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">a_deck</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[92]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>[&apos;1S&apos;,
+ &apos;2S&apos;,
+ &apos;3S&apos;,
+ &apos;4S&apos;,
+ &apos;5S&apos;,
+ &apos;6S&apos;,
+ &apos;7S&apos;,
+ &apos;8S&apos;,
+ &apos;9S&apos;,
+ &apos;10S&apos;,
+ &apos;JS&apos;,
+ &apos;QS&apos;,
+ &apos;KS&apos;,
+ &apos;1D&apos;,
+ &apos;2D&apos;,
+ &apos;3D&apos;,
+ &apos;4D&apos;,
+ &apos;5D&apos;,
+ &apos;6D&apos;,
+ &apos;7D&apos;,
+ &apos;8D&apos;,
+ &apos;9D&apos;,
+ &apos;10D&apos;,
+ &apos;JD&apos;,
+ &apos;QD&apos;,
+ &apos;KD&apos;,
+ &apos;1C&apos;,
+ &apos;2C&apos;,
+ &apos;3C&apos;,
+ &apos;4C&apos;,
+ &apos;5C&apos;,
+ &apos;6C&apos;,
+ &apos;7C&apos;,
+ &apos;8C&apos;,
+ &apos;9C&apos;,
+ &apos;10C&apos;,
+ &apos;JC&apos;,
+ &apos;QC&apos;,
+ &apos;KC&apos;,
+ &apos;1H&apos;,
+ &apos;2H&apos;,
+ &apos;3H&apos;,
+ &apos;4H&apos;,
+ &apos;5H&apos;,
+ &apos;6H&apos;,
+ &apos;7H&apos;,
+ &apos;8H&apos;,
+ &apos;9H&apos;,
+ &apos;10H&apos;,
+ &apos;JH&apos;,
+ &apos;QH&apos;,
+ &apos;KH&apos;]</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Generators</h3>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Lazy Evaluation</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Generator Syntaxes</h3>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Itertools</h3>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Generator tools</h3>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>http://www.shutupandship.com/2012/01/understanding-python-iterables-and.html</p>
 </div>
@@ -2189,17 +2815,32 @@ Out[20]:</div>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[40]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>[0, 1, 2]</pre>
+</div>
+</div>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">tee</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -2209,17 +2850,32 @@ Out[20]:</div>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">iter</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[42]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>&lt;itertools.tee at 0x10f9f37e8&gt;</pre>
+</div>
+</div>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="nb">iter</span><span class="err">?</span>
 </pre></div>
@@ -2229,7 +2885,7 @@ Out[20]:</div>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre>
 </pre></div>
