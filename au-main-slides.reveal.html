@@ -2329,7 +2329,8 @@ Out[24]:</div>
 <li>Standard for loop. Everyone learns first. Works on all languages</li>
 <li>Python programmers know that, there is no need to explicitly increment.</li>
 <li>The best is what it truly can be. Developer Happiness. This is what we need. This is what we have</li>
-<li>This happens because of some of the abstractions that are built around iteration and these are really helpful. We can leverage these abstractions in our own code and be direct</li>
+<li>This happens because of some of the abstractions that are built around iteration and these are really helpful. We can leverage these abstractions in our own code and be direct - The Python Forloop does a lot. - gets a value, assigns it a name and then performs ops on the element.</li>
+<li>The iterator gets to decide what value it produces next.</li>
 </ul>
 </div>
     </aside></section>
@@ -2575,11 +2576,11 @@ Out[35]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">glob</span>
-<span class="n">wares</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">/tmp/*&#39;</span><span class="o">%</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">wares</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s">&#39;/tmp/&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">list</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2591,7 +2592,7 @@ Out[35]:</div>
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>[&apos;//tmp/launch-4tjRHK&apos;, &apos;//tmp/launch-ImFEtV&apos;, &apos;//tmp/launch-IT4WB7&apos;, &apos;//tmp/launchd-154.htCYYc&apos;, &apos;//tmp/launchd-4955.spsh1H&apos;, &apos;//tmp/launchd-5166.bkhfvD&apos;, &apos;//tmp/manifest&apos;, &apos;//tmp/manifest.tar.gz&apos;]
+<pre>[(&apos;/tmp/&apos;, [&apos;launch-4tjRHK&apos;, &apos;launch-ImFEtV&apos;, &apos;launch-IT4WB7&apos;, &apos;launchd-154.htCYYc&apos;, &apos;launchd-4955.spsh1H&apos;, &apos;launchd-5166.bkhfvD&apos;, &apos;manifest&apos;], [&apos;manifest.tar.gz&apos;]), (&apos;/tmp/launch-4tjRHK&apos;, [], [&apos;Listeners&apos;]), (&apos;/tmp/launch-ImFEtV&apos;, [], [&apos;Render&apos;]), (&apos;/tmp/launch-IT4WB7&apos;, [], [&apos;Apple_Ubiquity_Message&apos;, &apos;Apple_Ubiquity_Message.server.lck&apos;]), (&apos;/tmp/launchd-154.htCYYc&apos;, [], [&apos;sock&apos;]), (&apos;/tmp/manifest&apos;, [], [&apos;manifest.xml&apos;, &apos;public.pem&apos;, &apos;signature&apos;])]
 </pre>
 </div>
 </div>
@@ -2636,7 +2637,7 @@ It was the worst of the times
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>File system is a 2d data structure</li>
-<li>A file can be seen as a collection of lines.</li>
+<li>A file can be seen as a collection of lines. No need to readline in a while loop.</li>
 <li>Brings back to the interesting note that was discussed earlier - you cannot get to the 10th line directly before reading the one. </li>
 </ul>
 </div>
@@ -2647,14 +2648,100 @@ It was the worst of the times
 <h3>Stdlib consumes iterators in many places</h3>
 </div><div class="fragment">
     
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>list</li>
-<li>max</li>
-<li>min</li>
-<li>sorted</li>
-<li>join</li>
-</ul>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">list</span><span class="p">(</span><span class="nb">xrange</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[64]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>[0, 1, 2, 3, 4]</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="nb">max</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[69]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>816</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">print</span> <span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="s">&quot;Hobart&quot;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>H
+o
+b
+a
+r
+t
+</pre>
+</div>
+</div>
+
+</div>
+</div>
 </div>
     </div></section>
     </section><section>
@@ -2824,7 +2911,42 @@ Out[42]:</div>
 </div>
 </div>
 </div>
-    </div></section>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">itertools</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+Out[63]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<pre>count(0)</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Count can be infinite. There is no end, other then ofcourse the end of time.</li>
+<li>You cannot ask the iterable how many values it has got.</li>
+</ul>
+</div>
+    </aside></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2903,9 +3025,9 @@ Out[43]:</div>
     
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="nb">dir</span><span class="p">(</span><span class="n">itertools</span><span class="p">)</span>
+<div class="highlight"><pre><span class="p">[</span><span class="n">el</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">itertools</span><span class="p">)</span> <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">itertools</span><span class="p">,</span> <span class="n">el</span><span class="p">))]</span>
 </pre></div>
 
 </div>
@@ -2916,14 +3038,10 @@ Out[43]:</div>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[48]:</div>
+Out[74]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
-<pre>[&apos;__doc__&apos;,
- &apos;__file__&apos;,
- &apos;__name__&apos;,
- &apos;__package__&apos;,
- &apos;chain&apos;,
+<pre>[&apos;chain&apos;,
  &apos;combinations&apos;,
  &apos;combinations_with_replacement&apos;,
  &apos;compress&apos;,
@@ -2949,11 +3067,29 @@ Out[48]:</div>
 </div>
 </div>
 </div>
-    </div></section>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>No one knows everything in itertools</li>
+<li>Everytime you have an iteration problem, lookup itertools</li>
+</ul>
+</div>
+    </aside></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3>Generator tools</h3>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
 </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell vbox">
