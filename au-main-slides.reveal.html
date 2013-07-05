@@ -2984,6 +2984,56 @@ Out[63]:</div>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3>Do something with the spades</h3>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">spades</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">a_deck</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">card</span><span class="o">.</span><span class="n">suit</span><span class="o">==</span><span class="s">&#39;S&#39;</span><span class="p">:</span>
+        <span class="n">spades</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+        <span class="c"># do_something with the cards</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">spade_cards</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">a_deck</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">card</span><span class="o">.</span><span class="n">suit</span><span class="o">==</span><span class="s">&#39;S&#39;</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">card</span>
+            
+<span class="k">def</span> <span class="nf">something_to_spade_cards</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">spade_cards</span><span class="p">():</span>
+        <span class="k">pass</span>
+        <span class="c"># do something to spade cards</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Less code. Better program</li>
+<li>Seperation of concerns</li>
+<li>Never run out of memory</li>
+</ul>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3>Generator Syntaxes</h3>
 </div><div class="fragment">
     
